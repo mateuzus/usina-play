@@ -1,0 +1,86 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="flex-between items-center" style="margin: 0px 5px">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <div style="padding-top: 10px">
+        <img
+          class="logo-header"
+          src="../assets/icon/logo.png"
+          alt=""
+        />
+      </div>
+      <div>
+        <app-notificacoes></app-notificacoes>
+      </div>
+    </div>
+    <app-informacoes></app-informacoes>
+    <app-cabecalho></app-cabecalho>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="swiper-div">
+    <p>
+      personal online
+      <ion-icon class="items-center" name="add-circle-outline"></ion-icon>
+    </p>
+    <swiper-container
+      [slidesPerView]="1.2"
+      [spaceBetween]="20"
+      [modules]="swiperModules"
+      [lazyLoading]="true"
+      [nextSlideOffset]="50"
+    >
+      <swiper-slide *ngFor="let item of personalTrainerList">
+        <app-exercicios
+          style="width: 100%"
+          [image]="item.image"
+          [title]="item.title"
+          [keepTraining]="item.trainingStarted"
+          [isPersonalTraining]="item.isPersonalTraining"
+        ></app-exercicios>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+
+  <div class="swiper-div">
+    <p>
+      programas
+      <ion-badge slot="start">novo</ion-badge>
+    </p>
+    <swiper-container
+      [slidesPerView]="1.2"
+      [spaceBetween]="20"
+      [modules]="swiperModules"
+      [lazyLoading]="true"
+      [nextSlideOffset]="50"
+    >
+      <swiper-slide *ngFor="let item of programsList">
+        <app-exercicios
+          style="width: 100%"
+          [image]="item.image"
+          [title]="item.title"
+          [keepTraining]="item.trainingStarted"
+          [isPersonalTraining]="item.isPersonalTraining"
+        ></app-exercicios>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+
+  <div style="margin-bottom: 20%; opacity: 12%" class="swiper-div">
+    <p>conteúdos</p>
+    <swiper-container
+      [slidesPerView]="1.2"
+      [spaceBetween]="20"
+      [modules]="swiperModules"
+      [lazyLoading]="true"
+      [nextSlideOffset]="50"
+    >
+      <swiper-slide *ngFor="let item of programsList">
+        <app-contents style="width: 100%"></app-contents>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</ion-content>

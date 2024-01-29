@@ -1,0 +1,12 @@
+<div class="main">
+  <div class="user-photo">
+    <img *ngIf="person.photo" [src]="person.photo" alt="" />
+    <div *ngIf="!person.photo" class="icon-div">
+      <ion-icon name="person"></ion-icon>
+    </div>
+  </div>
+  <div>
+    <p class="person">{{ person.name }}</p>
+    <p class="level">Nível {{ person.level }}</p>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+{
+  "name": "be220-usinaPlay",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

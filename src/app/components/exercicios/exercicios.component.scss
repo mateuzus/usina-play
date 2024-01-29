@@ -1,0 +1,83 @@
+.image-card {
+  position: relative;
+  width: 100%;
+}
+
+.card-bck {
+  filter: grayscale(1) blur(0.6px);
+
+  height: 20vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align-last: start;
+  color: white;
+  padding: 10px;
+  padding-left: 25px;
+}
+
+ion-card-title {
+  text-transform: uppercase;
+  text-align: start;
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+ion-card {
+  border-radius: 25px;
+}
+
+.keep-t {
+  color: var(--ion-color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+.new-t{
+  display: flex;
+  position: relative;
+  bottom: 50px;
+  left: 50px;
+  p{
+    font-size: 30px;
+    font-weight: 200;
+    margin-bottom: 0px;
+    margin-top: -13px;
+  }
+  ion-icon{
+    font-size: 60px;
+    -webkit-text-stroke: 1px;
+  }
+
+}
+
+.image-card-train {
+  position: relative;
+  width: 100%;
+}
+
+.card-bck-t {
+  filter: grayscale(1) blur(0.6px);
+  height: 20vh;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.card-content-t {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align-last: start;
+  color: white;
+  padding: 10px;
+  padding-left: 25px;
+}

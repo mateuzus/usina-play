@@ -1,0 +1,30 @@
+<ion-card *ngIf="isPersonalTraining" class="image-card">
+  <div class="card-bck-t" [style.background-image]="
+      'linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0,  1)),url(' +
+      image +
+      ')'
+    "></div>
+  <div class="card-content-t">
+    <div class="new-t">
+      <div style="place-self: center" class="col-auto">
+        <ion-icon name="add-circle-outline"></ion-icon>
+      </div>
+      <div class="col-auto">
+        <div class="row">
+          <p>NOVO</p>
+        </div>
+        <div class="row">
+          <p>TREINO</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-card>
+
+<ion-card *ngIf="!isPersonalTraining" class="image-card">
+  <div class="card-bck" [style.background-image]="'url(' + image + ')'"></div>
+  <div class="card-content">
+    <a href="#" class="keep-t" *ngIf="keepTraining">continuar treinando</a>
+    <ion-card-title>{{ title }}</ion-card-title>
+  </div>
+</ion-card>
